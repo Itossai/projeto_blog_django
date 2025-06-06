@@ -4,23 +4,18 @@
    {% include 'blog/partials/_head.html' %}
 </head>
 <body>
-    <h1>Exemplo processor: {{site_setup.title}}</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Aliquam, alias. At non esse harum consequatur ipsum quod blanditiis, 
-        dolor explicabo necessitatibus.
-        Quaerat, odio non illo tempore sapiente rem iusto! Repellendus?
-    </p>
-    {% include 'blog/partials/_header.html' %}
+    <div class="blog-wrapper">
+        {% include 'blog/partials/_header.html' %}
 
-    {% block content %} {% endblock content %} 
+        {% block content %} {% endblock content %} 
 
-    {% include 'blog/partials/_pagination.html' %}
+        {% include 'blog/partials/_pagination.html' %}
 
-    {% include 'blog/partials/_footer.html' %}
+        {% include 'blog/partials/_footer.html' %}
 
-    {% include 'blog/partials/_temp.html' %}
-
+        
+    </div>
+    
 </body>
 
 </html>
