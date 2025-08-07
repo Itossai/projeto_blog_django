@@ -15,15 +15,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from blog.views import index,page,post
+from blog.views import index,page,post, created_by,category
 from django.conf import settings
 from django.conf.urls.static import static
 app_name = 'blog'
 
 urlpatterns = [
     path('', index,name='index'),
-    path('page/', page,name='page'),
+    path('page/<slug:slug>/', page,name='page'),
     path('post/<slug:slug>/', post,name='post'),
+    path('category/<slug:slug>/',category, name='category'),
+    path('created_by/<int:author_pk>/',created_by, name='created_by'),
+    
 ]
 
 if settings.DEBUG:
