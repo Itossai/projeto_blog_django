@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from blog.views import index,page,post, created_by,category,tag
+from blog.views import index,page,post, created_by,category,tag,search
 from django.conf import settings
 from django.conf.urls.static import static
 app_name = 'blog'
@@ -27,6 +27,7 @@ urlpatterns = [
     path('category/<slug:slug>/',category, name='category'),
     path('created_by/<int:author_pk>/',created_by, name='created_by'),
     path('tag/<slug:slug>/',tag, name='tag'),
+    path('search/',search, name='search'),
 ]
 
 if settings.DEBUG:
