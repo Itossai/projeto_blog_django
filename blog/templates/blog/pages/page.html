@@ -4,11 +4,9 @@
     <main class="main-content section-wrapper">
         <div class="section-content-narrow">
             <div class="section-gap">
-                <h1>A page 😍</h1>
+                <h1>{{page.title}}</h1>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Laudantium molestias perferendis eaque aperiam tempore illum pariatur optio a quod? 
-                    Odit praesentium officia nobis porro labore, voluptatum impedit quod minima nostrum.
+                    {{  page.content | safe}}
                 </p>
             </div>
         </div>
