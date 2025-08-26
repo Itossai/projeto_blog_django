@@ -6,8 +6,8 @@
       <div class="section-gap">
         
         <div class="card-grid">
-          {% if page_obj %}
-            {% for post in page_obj %}
+          {% if posts %}
+            {% for post in posts %}
               {% include 'blog/partials/_post-card.html' with i=forloop.counter0 %}
             {% endfor %}
           {% else %}
